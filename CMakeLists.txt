@@ -7,6 +7,4 @@ set_target_properties(imgui PROPERTIES
 	CMAKE_CXX_STANDARD 20
 )
 
-target_include_directories(imgui PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-target_include_directories(imgui PUBLIC ../${CMAKE_CURRENT_SOURCE_DIR})
-target_include_directories(imgui PUBLIC ../${CMAKE_CURRENT_SOURCE_DIR}/backends)
+target_include_directories(imgui PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} PUBLIC ../${CMAKE_CURRENT_SOURCE_DIR} PUBLIC ../${CMAKE_CURRENT_SOURCE_DIR}/backends)
