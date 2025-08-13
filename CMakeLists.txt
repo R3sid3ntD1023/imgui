@@ -5,6 +5,7 @@ set(PROJECT_NAME imgui)
 option(IMGUI_DEMO "Build imgui_demo.cpp" ON)
 option(IMGUI_OPENGL "Build with opengl" ON)
 option(IMGUI_GLFW "Build with glfw" ON)
+option(GLFW_NAME "Set GLFW PACKAGE NAME" "glfw3")
 
 set(IMGUI_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/imgui.cpp
@@ -20,7 +21,7 @@ if(IMGUI_OPENGL)
 endif()
 
 if(IMGUI_GLFW)
-    find_package(glfw3 CONFIG REQUIRED)
+    find_package(${GLFW_NAME} CONFIG REQUIRED)
     list(APPEND IMGUI_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/backends/imgui_impl_glfw.cpp)
 endif()
 
