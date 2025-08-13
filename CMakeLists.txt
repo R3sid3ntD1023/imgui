@@ -5,7 +5,7 @@ set(PROJECT_NAME imgui)
 option(IMGUI_DEMO "Build imgui_demo.cpp" ON)
 option(IMGUI_OPENGL "Build with opengl" ON)
 option(IMGUI_GLFW "Build with glfw" ON)
-option(GLFW_NAME "Set GLFW PACKAGE NAME" "glfw3")
+set(GLFW_NAME "Set GLFW PACKAGE NAME" "glfw3")
 
 set(IMGUI_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/imgui.cpp
